@@ -1,0 +1,176 @@
+:root {
+  --soft-red: hsl(10, 79%, 65%);
+  --cyan: hsl(186, 34%, 60%);
+  --dark-brown: hsl(25, 47%, 15%);
+  --medium-brown: hsl(28, 10%, 53%);
+  --cream: hsl(27, 66%, 92%);
+  --very-pale-orange: hsl(33, 100%, 98%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  background-color: var(--cream);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: DM sans;  
+}
+
+main {
+  width: 90%;
+}
+
+header {
+  background-color: var(--soft-red);
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  border-radius: 10px;
+}
+
+.header-text-box {
+  margin-left: 15px;
+}
+
+.my-balance-text {
+  color: var(--cream);
+  font-size: 0.9rem;
+
+}
+
+.my-balance {
+  font-size: 1.5rem;
+  color: var(--cream);
+  font-weight: 700;
+  margin-top: 5px;
+}
+
+.header-image-box {
+  margin-right: 20px;
+}
+
+.logo {
+  width: 60px;
+  height: 60px;
+}
+
+section {
+  background-color: var(--very-pale-orange);
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+  border-radius: 10px;
+}
+
+.section-box {
+  width: 90%;
+}
+
+.last-seven {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--dark-brown);
+  margin-bottom: 40px;
+}
+
+.graph {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid hsla(28, 10%, 53%, 0.345);
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.graph-column {
+  height: 150px;
+  width: 35px;
+  background-color: var(--soft-red);
+  margin-bottom: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+}
+
+.box p {
+  font-size: 0.9rem;
+  color: var(--medium-brown);
+}
+
+.calculations-box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.total-text {
+  color: var(--medium-brown);
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+}
+
+.total {
+  font-size: 2rem;
+  color: var(--dark-brown);
+  font-weight: 700;
+}
+
+.right-box {
+  margin-top: 25px; 
+}
+
+.percentage {
+  color: var(--dark-brown);
+  font-weight: 700;  
+  text-align: end;
+}
+
+.from {
+  color: var(--medium-brown);
+  font-size: 0.9rem;
+}
+
+.tooltip {
+  background-color: var(--dark-brown);
+  border-radius: 3px;
+  color: var(--cream);
+  font-weight: 700;
+  padding: 6px 4px;
+  font-size: 0.8rem;
+  position: absolute;
+  top: -35px;
+  visibility: hidden;
+}
+
+.graph-column:hover, .graph-column:active {
+  opacity: 0.8;
+}
+
+.graph-column:hover .tooltip, .graph-column:active .tooltip {
+  visibility: visible;
+}
+
+@media(min-width: 450px) {
+  main {
+    width: 400px;
+  }
+  .graph-column {
+    width: 40px;
+  }
+}
